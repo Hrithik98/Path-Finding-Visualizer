@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body id="root">
+		Checklist:<br />
+	</body>
+	<script type="text/javascript" src="./todosData.js"></script>
+	<script type="text/javascript">
+		var x=document.getElementById('root')
+		var y=todosData
+		var txt=""
+		var z=y.map(obj => {
+			txt+='<input type="checkbox" /><label>'
+			txt+= obj.text
+			txt+='</label><hr />'
+			return obj;
+		})
+		x.innerHTML=txt
+	</script>
+</html>
